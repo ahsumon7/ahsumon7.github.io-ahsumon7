@@ -743,7 +743,7 @@ p{
 }
 .beny_tm_about_wrap .subtitle p{
 	font-family: "Montserrat";
-	color: #000;
+	color: #fd4d4d;
 	font-size: 15px;
 	font-weight: 600;
 }
@@ -791,11 +791,20 @@ p{
 	box-sizing: border-box;
 }
 .beny_tm_skills_wrap .leftbox h3{
-	font-size: 22px;
+	font-size: 30px;
 	font-family: "Montserrat";
-	font-weight: 600;
+	font-weight: 800;
 	margin-bottom: 20px;
-	line-height: 1.4;
+	line-height: 1;
+}
+/* match About Me text + bold style */
+.beny_tm_skills_wrap .leftbox p{
+	color: #333;
+	margin-bottom: 11px;
+}
+.beny_tm_skills_wrap .leftbox strong{
+	color: #fd4d4d;
+	font-family: "Montserrat";
 }
 .progress_bar_wrap_total{
 	width: 100%;
@@ -1782,19 +1791,6 @@ p{
 	border-radius: 3px;
 }
 .beny_tm_news_wrap .definitions_wrap{padding: 40px 30px 47px 30px;}
-.beny_tm_news_wrap .image_wrap{position: relative;}
-.beny_tm_news_wrap .image_wrap .big{display: none;}
-.beny_tm_news_wrap .image_wrap .small{display: block;}
-.beny_tm_news_wrap .news_image{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-}
 .beny_tm_news_wrap .date_wrap{margin-bottom: 16px;}
 .beny_tm_news_wrap .date_wrap p{
 	color: #333;
@@ -1845,7 +1841,7 @@ p{
 	     -o-transition: all .3s ease;
 	        transition: all .3s ease;
 }
-.beny_tm_news_wrap .title_holder h3 a:hover{color: #fd4d4d;}
+.beny_tm_news_wrap .title_holder h3 a:hover{color: #161616;}
 .beny_tm_news_wrap .definition{margin-bottom: 26px;}
 .beny_tm_news_wrap .definition p{color: #333;}
 .beny_tm_news_wrap .read_more a{
@@ -1933,27 +1929,6 @@ p{
     text-transform: uppercase;
     position: relative;
     margin-left: 23px;
-}
-#beny_tm_popup_blog .image_wrap{
-	margin-bottom: 45px;
-	position: relative;
-	width: 100%;
-	float: left;
-}
-#beny_tm_popup_blog .image_wrap .big{
-	display: block;
-	min-height: 250px;
-}
-#beny_tm_popup_blog .image_wrap .small{display: none;}
-#beny_tm_popup_blog .image_wrap .news_image{
-	position: absolute;
-	top: 0px;
-	bottom: 0px;
-	left: 0px;
-	right: 0px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: cover;
 }
 #beny_tm_popup_blog .date_wrap{
 	margin-bottom: 16px;
@@ -2527,7 +2502,7 @@ p{
 .beny_tm_leftpart_wrap .author_job h3{
 	font-family: "Montserrat";
     
-	color: #FF003D;
+	color: #fd4d4d;
 	font-size: 15px;
 	font-weight: 700;
 	text-transform: uppercase;
@@ -2983,3 +2958,153 @@ p{
 	.beny_tm_totop{bottom: 20px;right: 30px;}
 	.beny_tm_totop.opened{bottom: 30px;}
 }	
+/*---------------------------------------------------*/
+/*	DOMAIN EXPERTISE (custom)
+/*---------------------------------------------------*/
+.domain_expertise{margin-top: 25px;}
+.domain_expertise .domain_label{
+	display: block;
+	font-family: "Montserrat";
+	font-weight: 800;
+	font-size: 18px;
+	line-height: 1;
+	color: #161616;
+	margin-bottom: 24px;
+}
+.domain_expertise .domain_tags{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.domain_expertise .domain_tags li{
+	display: inline-block;
+	margin: 0 8px 8px 0;
+	padding: 8px 18px;
+	border: 1px solid #000;
+	border-radius: 30px;
+	font-family: 'Montserrat';
+	font-weight: 700;
+	font-size: 13px;
+	color: #000;
+	transition: all .3s ease;
+}
+.domain_expertise .domain_tags li:hover{
+	background: #000;
+	color: #fff;
+}
+
+/* ===== Projects — Style C (minimal monochrome cards) ===== */
+/* flex rows => every card in a row equalizes to the tallest, no fixed-height gaps */
+.beny_tm_news_wrap ul.total{ display:flex; flex-wrap:wrap; }
+.beny_tm_news_wrap ul.total > li{ display:flex; }
+.beny_tm_news_wrap ul.total > li .inner_list{ height:auto; clear:none; }
+
+.beny_tm_news_wrap .inner_list{
+  background:#fff; border:1px solid #e7e8eb; border-radius:14px;
+  padding:22px 20px; width:100%; display:flex; flex-direction:column;
+  box-shadow:0 4px 18px rgba(20,20,20,.05);
+  transition:transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+.beny_tm_news_wrap .inner_list:hover{
+  transform:translateY(-6px); box-shadow:0 22px 44px rgba(20,20,20,.18);
+  background:#161616; border-color:#161616;
+}
+/* real content lives in .definitions_wrap — it must be the flex column so footer can pin */
+.beny_tm_news_wrap .definitions_wrap{
+  display:flex; flex-direction:column; flex:1 0 auto;
+}
+/* icon in a circular tile (matches Personal Interests) */
+.beny_tm_news_wrap .proj_icon{
+  width:46px; height:46px; margin-bottom:16px; border-radius:50%;
+  background:#161616; display:flex; align-items:center; justify-content:center;
+  transition:background-color .3s ease;
+}
+.beny_tm_news_wrap .proj_icon svg{ width:22px; height:22px; stroke:#fff; transition:stroke .3s ease; }
+.beny_tm_news_wrap .proj_badge{
+  display:inline-flex; align-items:center; gap:7px; font-family:"Montserrat";
+  font-size:9px; font-weight:700; letter-spacing:1.3px; text-transform:uppercase;
+  color:#8a9099; margin-bottom:9px; transition:color .3s ease;
+}
+.beny_tm_news_wrap .proj_badge::before{
+  content:""; width:6px; height:6px; border-radius:50%; background:#161616; flex:none;
+  transition:background-color .3s ease;
+}
+.beny_tm_news_wrap .title_holder{ margin-bottom:9px; }
+.beny_tm_news_wrap .title_holder h3 a{
+  color:#161616; font-size:16px; line-height:1.35; font-weight:700;
+  transition:color .3s ease;
+}
+.beny_tm_news_wrap .definition{ margin-bottom:0; }
+.beny_tm_news_wrap .definition p{
+  color:#6b7077; font-size:13px; line-height:1.55; transition:color .3s ease;
+}
+
+/* footer row: label + circular arrow — pinned to card bottom */
+.beny_tm_news_wrap .read_more{
+  display:flex; align-items:center; justify-content:space-between;
+  border-top:1px solid #eef0f2; padding-top:15px; margin-top:auto;
+  transition:border-color .3s ease;
+}
+.beny_tm_news_wrap .read_more .label{
+  font-family:"Montserrat"; font-weight:700; font-size:10px; letter-spacing:1.1px;
+  text-transform:uppercase; color:#161616; transition:color .3s ease;
+}
+.beny_tm_news_wrap .read_more a{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:34px; height:34px; border-radius:50%; background:#fd4d4d; color:#fff;
+  font-size:15px; text-decoration:none; padding:0; overflow:visible;
+  transition:transform .25s, background-color .3s ease, color .3s ease;
+}
+.beny_tm_news_wrap .read_more a:before{ display:none; }   /* remove old skew fill */
+
+/* hover: card fills black, icon tile + arrow invert, text turns light (Interests-style) */
+.beny_tm_news_wrap .inner_list:hover .proj_icon{ background:#fff; }
+.beny_tm_news_wrap .inner_list:hover .proj_icon svg{ stroke:#161616; }
+.beny_tm_news_wrap .inner_list:hover .proj_badge{ color:#b7bcc4; }
+.beny_tm_news_wrap .inner_list:hover .proj_badge::before{ background:#fff; }
+.beny_tm_news_wrap .inner_list:hover .title_holder h3 a{ color:#fff; }
+.beny_tm_news_wrap .inner_list:hover .definition p{ color:#c9cdd3; }
+.beny_tm_news_wrap .inner_list:hover .read_more{ border-top-color:rgba(255,255,255,.18); }
+.beny_tm_news_wrap .inner_list:hover .read_more .label{ color:#fff; }
+.beny_tm_news_wrap .inner_list:hover .read_more a{ background:#fff; color:#fd4d4d; transform:translateX(4px); }
+
+/* ===== Project popup — readable, friendly layout ===== */
+#beny_tm_popup_blog{ padding:0px; overflow-y:auto; }
+#beny_tm_popup_blog .container{ max-width:740px; padding:70px 30px 90px; }
+/* icon tile in popup (card styles don't reach here) */
+#beny_tm_popup_blog .proj_icon{
+  width:64px; height:64px; border-radius:50%; background:#161616;
+  display:flex; align-items:center; justify-content:center; margin-bottom:20px;
+}
+#beny_tm_popup_blog .proj_icon svg{ width:30px; height:30px; stroke:#fff; }
+#beny_tm_popup_blog .proj_badge{
+  display:inline-flex; align-items:center; gap:8px; font-family:"Montserrat";
+  font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
+  color:#8a9099; margin-bottom:14px;
+}
+#beny_tm_popup_blog .proj_badge::before{
+  content:""; width:6px; height:6px; border-radius:50%; background:#fd4d4d;
+}
+#beny_tm_popup_blog .title_holder h3 a{ font-size:30px; font-weight:700; }
+/* CV meta cards: role / company / period / location */
+#beny_tm_popup_blog .proj_meta{
+  list-style:none; margin:0 0 26px; padding:22px 24px; width:100%; float:left;
+  display:grid; grid-template-columns:repeat(2,1fr); gap:16px 28px;
+  background:#f7f8f9; border:1px solid #eceef1; border-radius:12px;
+  box-sizing:border-box;
+}
+#beny_tm_popup_blog .proj_meta li{ display:flex; flex-direction:column; gap:3px; }
+#beny_tm_popup_blog .proj_meta li span{
+  font-family:"Montserrat"; font-size:10px; font-weight:700; letter-spacing:1.2px;
+  text-transform:uppercase; color:#9aa0a8;
+}
+#beny_tm_popup_blog .proj_meta li b{
+  font-family:"Montserrat"; font-size:14.5px; font-weight:600; color:#161616;
+}
+#beny_tm_popup_blog .full_def p{ display:block; line-height:1.75; color:#555; }
+#beny_tm_popup_blog .beny_tm_popup_share_wrap ul li a{ color:#161616; }
+#beny_tm_popup_blog .beny_tm_popup_share_wrap ul li a:hover{ color:#fd4d4d; }
+@media (max-width:600px){
+  #beny_tm_popup_blog .proj_meta{ grid-template-columns:1fr; }
+  #beny_tm_popup_blog .title_holder h3 a{ font-size:23px; }
+}
